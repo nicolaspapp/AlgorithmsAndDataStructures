@@ -11,7 +11,7 @@
 
 template<class T>
 class LinkedList: public ListInterface<T> {
-private:
+protected:
     Node<T>* head;
 public:
     LinkedList(){
@@ -27,11 +27,11 @@ public:
 
 
     bool empty(){
-        return (head == NULL);
+        return (head == 0);
     }
 
 
-    void print(){
+    virtual void print(){
         Node<T> *aux = head;
         if(empty()){
             std::cout << "Empty List!" << std::endl;
