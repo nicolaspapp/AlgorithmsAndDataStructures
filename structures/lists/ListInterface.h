@@ -2,8 +2,8 @@
 // Created by Nicolas on 11/3/2019.
 //
 
-#ifndef ALGORITMOSYED_LISTINTERFACE_H
-#define ALGORITMOSYED_LISTINTERFACE_H
+#ifndef ALGORITHMS_LISTINTERFACE_H
+#define ALGORITHMS_LISTINTERFACE_H
 
 template<class T>
 class ListInterface{
@@ -26,4 +26,4 @@ public:
     virtual void print() = 0;
 };
 
-#endif //ALGORITMOSYED_LISTINTERFACE_H
+#endif //ALGORITHMS_LISTINTERFACE_H

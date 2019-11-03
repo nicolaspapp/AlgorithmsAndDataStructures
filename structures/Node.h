@@ -2,8 +2,8 @@
 // Created by Nicolas on 11/2/2019.
 //
 
-#ifndef ALGORITMOSYED_NODO_H
-#define ALGORITMOSYED_NODO_H
+#ifndef ALGORITHMS_NODE_H
+#define ALGORITHMS_NODE_H
 
 #include <cstdlib>
 #include <iostream>
@@ -19,22 +19,22 @@ public:
         this->data = data;
         this->next = NULL;
     }
-    void setData(Data data){
+    void set_data(Data data){
         this->data = data;
     }
-    Data getData(){
+    Data get_data(){
         return data;
     }
-    bool hasNext(){
+    bool has_next(){
         return next != NULL;
     }
-    Node *getNext(){
+    Node *get_next(){
         return next;
     }
-    void setNext(Node *next){
+    void set_next(Node *next){
         this->next = next;
     }
 };
 
 
-#endif //ALGORITMOSYED_NODO_H
+#endif //ALGORITHMS_NODE_H

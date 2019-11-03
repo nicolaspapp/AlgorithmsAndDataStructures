@@ -2,8 +2,8 @@
 // Created by Nicolas on 11/2/2019.
 //
 
-#ifndef ALGORITMOSYED_LINKEDLIST_H
-#define ALGORITMOSYED_LINKEDLIST_H
+#ifndef ALGORITHMS_LINKEDLIST_H
+#define ALGORITHMS_LINKEDLIST_H
 
 #include "../Node.h"
 #include "ListInterface.h"
@@ -21,7 +21,7 @@ public:
     void add(T data){
         Node<T> *aux;
         aux = new Node<T>(data);
-        aux->setNext(this->head);
+        aux->set_next(this->head);
         this->head = aux;
     }
 
@@ -39,12 +39,12 @@ public:
         else{
             std::cout << "List is: " << std::endl;
             while(aux != NULL){
-                std::cout << std::setw(4) << aux->getData() << " ";
-                aux = aux->getNext();
+                std::cout << std::setw(4) << aux->get_data() << " ";
+                aux = aux->get_next();
             }
             std::cout << std::endl;
         }
     }
 };
 
-#endif //ALGORITMOSYED_LINKEDLIST_H
+#endif //ALGORITHMS_LINKEDLIST_H
