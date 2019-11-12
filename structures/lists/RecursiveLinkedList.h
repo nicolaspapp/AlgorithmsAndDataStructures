@@ -29,7 +29,7 @@ private:
             return p;
         } else {
             std::ostringstream stm;
-            stm << this->get_head()->get_data() <<" "<< this->get_rest()->recursive_print(p) << std::endl;
+            stm << this->get_head()->get_data() <<" "<< this->get_rest()->recursive_print(p);
             return stm.str();
         }
     }

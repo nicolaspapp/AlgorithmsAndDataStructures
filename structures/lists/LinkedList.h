@@ -14,8 +14,30 @@ class LinkedList: public ListInterface<T> {
 protected:
     Node<T>* head;
 public:
+    Node <T>* get_head() const{
+        return head;
+    }
+
+    /**
+     * List concatenation by appending to last node
+     * @param list
+     */
+    virtual LinkedList<T> operator+=(const LinkedList<T> &list){
+        Node<T>* aux = this->head;
+        if(aux == NULL){
+            this->head = list.get_head();
+        }
+        else{
+            while(aux->get_next() != NULL){
+                aux = aux->get_next();
+            }
+            aux->set_next(list.get_head());
+        }
+        return *this;
+    }
+
     LinkedList(){
-        head = NULL;
+        this->head = NULL;
     }
 
     void add(T data){
@@ -27,12 +49,12 @@ public:
 
 
     bool empty(){
-        return (head == 0);
+        return (this->head == 0);
     }
 
 
     virtual void print(){
-        Node<T> *aux = head;
+        Node<T> *aux = this->head;
         if(empty()){
             std::cout << "Empty List!" << std::endl;
         }
@@ -46,9 +68,9 @@ public:
         }
     }
 
-    int size(){
+    virtual int size(){
         int len = 0;
-        Node<T> *aux = head;
+        Node<T> *aux = this->head;
         while(aux != NULL){
             ++len;
             aux = aux->get_next();

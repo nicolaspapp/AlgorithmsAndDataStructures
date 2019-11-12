@@ -17,6 +17,7 @@ int main()
     r->add(1);
     r->add(2);
     l->print();
+    r->print();
     //cout<< "suma:"<<l->suma(0)<<endl;
     cout << "List l size: " << l->size() << endl;
     cout << "List r size: " << r->size() << endl;

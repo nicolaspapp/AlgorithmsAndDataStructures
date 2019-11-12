@@ -14,8 +14,20 @@ int main(int argc, char *argv[])
     l.add(9);
     l.add(-3);
     l.print();
-    cout << endl << endl;
+    cout << endl;
 
     cout << "List length: " << l.size() << endl;
+
+    LinkedList<int> r;
+    r.add(1);
+    r.add(2);
+    r.add(3);
+    r.print();
+
+    LinkedList<int> p;
+    p += l;
+    p.print();
+    p += r;
+    p.print();
     return EXIT_SUCCESS;
 }
