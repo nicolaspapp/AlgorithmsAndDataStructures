@@ -47,5 +47,11 @@ public:
         std::cout << this->recursive_print("") << std::endl;
     }
 
+    int size(){
+        if (this->empty()) {
+            return 0;
+        }
+        return 1+this->get_rest()->size();
+    }
 };
 #endif //RECURSIVELINKEDLIST_H

@@ -15,5 +15,7 @@ int main(int argc, char *argv[])
     l.add(-3);
     l.print();
     cout << endl << endl;
+
+    cout << "List length: " << l.size() << endl;
     return EXIT_SUCCESS;
 }

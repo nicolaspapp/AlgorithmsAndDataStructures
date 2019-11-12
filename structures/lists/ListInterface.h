@@ -24,6 +24,11 @@ public:
      * Print LinkedList
      */
     virtual void print() = 0;
+
+    /**
+     * Return list size
+     */
+    virtual int size() = 0;
 };
 
 #endif //ALGORITHMS_LISTINTERFACE_H

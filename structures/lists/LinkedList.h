@@ -45,6 +45,16 @@ public:
             std::cout << std::endl;
         }
     }
+
+    int size(){
+        int len = 0;
+        Node<T> *aux = head;
+        while(aux != NULL){
+            ++len;
+            aux = aux->get_next();
+        }
+        return len;
+    }
 };
 
 #endif //ALGORITHMS_LINKEDLIST_H
