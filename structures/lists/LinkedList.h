@@ -48,7 +48,7 @@ public:
     }
 
 
-    bool empty(){
+    virtual bool empty(){
         return (this->head == 0);
     }
 
