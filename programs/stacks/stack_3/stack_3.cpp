@@ -2,6 +2,7 @@
 // Created by Nicolas on 11/13/2019.
 //
 
+#include "../../../structures/stacks/ArrayStack.h"
 #include "../../../structures/stacks/LinkedStack.h"
 #include <iostream>
 #include <string>
@@ -18,7 +19,7 @@ using namespace std;
 int main(int argc, char *argv[]){
 
     string input_string;
-    LinkedStack<char> *stack = new LinkedStack<char>();
+    ArrayStack<char> *stack = new ArrayStack<char>(20);
     const map<char, char> tokens = {
             {'{', '}'},
             {'(', ')'},
@@ -53,6 +54,7 @@ int main(int argc, char *argv[]){
         cout << "String is balanced" << endl;
     else
         cout<< "ERROR" << endl;
+
 
     return 0;
 }

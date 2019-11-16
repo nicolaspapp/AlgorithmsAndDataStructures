@@ -7,6 +7,7 @@
 
 #include "../lists/LinkedList.h"
 #include "../Node.h"
+#include "StackInferface.h"
 
 /**
  * Stack implementation using a LinkedList as a base
@@ -14,7 +15,7 @@
  * a stack
  */
  template<class T>
-class LinkedStack: private LinkedList<T>{
+class LinkedStack: private LinkedList<T>, public StackInterface<T>{
 public:
     void push(T element){
         this->add(element);
