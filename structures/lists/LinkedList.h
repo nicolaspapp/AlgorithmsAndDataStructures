@@ -5,7 +5,7 @@
 #ifndef ALGORITHMS_LINKEDLIST_H
 #define ALGORITHMS_LINKEDLIST_H
 
-#include "../Node.h"
+#include "../helpers/Node.h"
 #include "ListInterface.h"
 #include <iostream>
 

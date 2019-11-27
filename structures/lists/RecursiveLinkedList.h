@@ -6,7 +6,7 @@
 #define RECURSIVELINKEDLIST_H
 
 #include "LinkedList.h"
-#include "../Node.h"
+#include "../helpers/Node.h"
 
 template<class T>
 class RecursiveLinkedList: public LinkedList<T> {

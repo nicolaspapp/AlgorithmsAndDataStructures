@@ -6,7 +6,7 @@
 #define LISTS_1_LINKEDSTACK_H
 
 #include "../lists/LinkedList.h"
-#include "../Node.h"
+#include "../helpers/Node.h"
 #include "StackInferface.h"
 
 /**
