@@ -26,10 +26,12 @@ public:
     }
 
     void pop(){
-        Node<T> *aux;
-        aux = this->get_head();
-        this->head = this->get_head()->get_next();
-        delete aux;
+        if (this->get_head()) {
+            Node<T> *aux;
+            aux = this->get_head();
+            this->head = this->get_head()->get_next();
+            delete aux;
+        }
     }
 
     /**

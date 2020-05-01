@@ -7,6 +7,8 @@
 
 #include "LinkedList.h"
 #include "../helpers/Node.h"
+#include <string>
+#include <sstream>
 
 template<class T>
 class RecursiveLinkedList: public LinkedList<T> {
