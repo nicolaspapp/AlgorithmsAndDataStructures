@@ -9,6 +9,9 @@
 #include <iostream>
 #include <iomanip>
 
+/**
+ * Clase que representa a un nodo dentro de una lista
+ * */
 template<class Data>
 class Node {
 private:

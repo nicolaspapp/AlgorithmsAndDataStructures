@@ -10,21 +10,33 @@
 #include "StackInferface.h"
 
 /**
- * Stack implementation using a LinkedList as a base
- * Inherits private from LinkedList: We want to hide all methods that do not correspond to
- * a stack
+ * Implementación de una pila de manera enlzada
+ * usando la clase LinkedList como base
+ * y la interfaz StackInterface
  */
  template<class T>
 class LinkedStack: private LinkedList<T>, public StackInterface<T>{
 public:
+    /**
+     * Empuja un elemento al tope de la pila
+     * Sobreescribe StackInterface::push
+     * */
     void push(T element){
         this->add(element);
     }
 
+    /**
+     * Devuelve el top de la pila
+     * Sobreescribe StackInterface::get_top
+     * */
     T get_top(){
         return this->get_head()->get_data();
     }
 
+    /**
+     * Retira el último elemento del tope de la pila
+     * Sobreescribe StackInterface::pop
+     * */
     void pop(){
         if (this->get_head()) {
             Node<T> *aux;
@@ -35,7 +47,7 @@ public:
     }
 
     /**
-     * Add visibitlity to a method that its otherwise private
+     * Da visibilidad a un método privado
      * @return
      */
     bool empty(){

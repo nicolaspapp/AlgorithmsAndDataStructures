@@ -9,17 +9,25 @@
 #include "ListInterface.h"
 #include <iostream>
 
+
+/**
+ * Estructura de una lista enlazada.
+ * Aplica la interfaz de ListInterface
+ * */
 template<class T>
 class LinkedList: public ListInterface<T> {
 protected:
     Node<T>* head;
 public:
+    /**
+     * Retorna la cabeza de la lsita
+     * */
     Node <T>* get_head() const{
         return head;
     }
 
     /**
-     * List concatenation by appending to last node
+     * Concatenación de listas
      * @param list
      */
     virtual LinkedList<T> operator+=(const LinkedList<T> &list){
@@ -40,6 +48,9 @@ public:
         this->head = NULL;
     }
 
+    /**
+     * Sobreescribe ListInterface::add
+     * */
     void add(T data){
         Node<T> *aux;
         aux = new Node<T>(data);
@@ -47,12 +58,16 @@ public:
         this->head = aux;
     }
 
-
+    /**
+     * Sobreescribe ListInterface::empty
+     * */
     virtual bool empty(){
         return (this->head == 0);
     }
 
-
+    /**
+     * Sobreescribe ListInterface::print
+     * */
     virtual void print(){
         Node<T> *aux = this->head;
         if(empty()){
@@ -68,6 +83,9 @@ public:
         }
     }
 
+    /**
+     * Sobreescribe ListInterface::size
+     * */
     virtual int size(){
         int len = 0;
         Node<T> *aux = this->head;

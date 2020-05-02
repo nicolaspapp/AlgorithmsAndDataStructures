@@ -12,7 +12,7 @@
 #include <stdexcept>
 
 /**
- * Class that holds function to analyze and transform text to mathematical operations
+ * Clase que contiene las funciones para analizar y transformar texto a operaciones matemáticas
  */
 class ExpressionAnalyzer {
 private:
@@ -23,10 +23,10 @@ private:
     int procedence_function(const char& o1, const char& o2);
 public:
     /**
-     * Class constructor
+     * Constructor
      * @param tokens
-     *  Maps of opening and closing tokens that will be considered
-     *  Example:
+     *  Mapa que contiene el token que abre y que cierra para tener en cuenta
+     *  Ejemplo:
      *   {'{', '}'},
      *   {'(', ')'},
      *   {'[', ']'}
@@ -34,15 +34,15 @@ public:
     ExpressionAnalyzer(const std::map<char, char> tokens);
 
     /**
-     * Assertive method to check for syntaxis
-     * Throws std::exception if syntax is invalid
-     * @param input_str
+     * Método utilizado para verificar la sintaxis de un string
+     * Arroja std::exception si la sintaxis es inválida
+     * @param input_str string a ser analizado
      */
     void check_syntaxis(const std::string &input_str);
 
     /**
-     * Method that processes an infix str and returns the result
-     * @param infix_str : infix string. Example: (2+2)*(1-3)
+     * Método que procesa un string en entrefijo y retorna el resultado
+     * @param infix_str : string en entrefijo. Ejemplo: (2+2)*(1-3)
      * @return
      */
     int process_string(const std::string &infix_str);

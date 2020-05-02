@@ -9,24 +9,24 @@ template<class T>
 class ListInterface{
 public:
     /**
-     * Insert a node in front of the LinkedList
+     * Inserta un nodo al principio de una lista
      * @param data
      */
     virtual void add(T data) = 0;
 
     /**
-     * Check if LinkedList is empty
+     * Retorna si la lista es o no vacia
      * @return
      */
     virtual bool empty() = 0;
 
     /**
-     * Print LinkedList
+     * Imprime la estructura de datos
      */
     virtual void print() = 0;
 
     /**
-     * Return list size
+     * Retorna la cantidad de elementos de la lista
      */
     virtual int size() = 0;
 };

@@ -7,9 +7,21 @@
 
 template<class T>
 class StackInterface{
+    /**
+     * Empuja un elemento al tope de la pila
+     * */
     virtual void push(T element) = 0;
+    /**
+     * Retorna el tope de la pila
+     * */
     virtual T get_top() = 0;
+    /**
+     * Retira el elemento del tope de la pila
+     * */
     virtual void pop() = 0;
+    /**
+     * Retorna si la lista es o no vacía
+     * */
     virtual  bool empty() = 0;
 };
 
